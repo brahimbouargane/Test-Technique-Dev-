@@ -1,38 +1,127 @@
-.App {
+body{
+  font-family: 'Open Sans', sans-serif;
+}
+
+button {   
+   background-color: #4589e2;   
+   width: 100%;  
+   color: rgb(243, 243, 243);   
+   padding: 10px;   
+   margin: 10px 0px;   
+   border: none;   
+   cursor: pointer;   
+   border-radius: 5px;
+   font-size: medium;
+}   
+ 
+input[type=text], input[type=password] {   
+   width: 100%;   
+   margin: 8px 0;  
+   padding: 12px 20px;   
+   display: inline-block; 
+   border: 0.5px solid rgb(230, 230, 230);  
+   border-radius: 4px;
+   box-sizing: border-box;   
+}  
+button:hover {   
+   opacity: 0.7;   
+}
+
+.cancelbtn {   
+   width: auto;   
+   padding: 10px 18px;  
+   margin: 10px 5px;  
+}   
+   
+
+.container {   
+   padding: 25px;   
+   border: 1px solid rgb(230, 230, 230);
+   border-radius: 5px;  
+   width: 400px;
+   position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+   
+}   
+.login{
+  margin: 10px;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.text-danger{
+  color: red;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.card{
+  padding: 20px;
+  margin: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  width: 300px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card-container{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3.5rem;
+}
+.navbar{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+.navbar a{
+  margin-top: 13px;
+}
+.navbar ul{
+  display: flex;
+  list-style: none;
+}
+.navbar li {
+  padding-left: 2rem;
+}
+a{
+  text-decoration: none;
+  color: #282c34;
+  font-weight: 600;
+  font-size: 22px;
+  cursor: pointer;
+}
+.link{
+  font-weight: 700;
+}
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.middle > h2{
+  font-size: 42px;
+}
+@media (max-width: 90em) {
+  .card-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0rem;
+  }
+}
+@media (max-width: 70em) {
+  .card-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0rem;
+  }
+}
+@media (max-width: 30em) {
+  .card-container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+   
+  }
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
